@@ -10,7 +10,7 @@ O projeto será disponibilizado como *release* no *GitHub Pages*!
 
 Para que o projeto funcione, você precisa de um navegador moderno (Google Chrome, Mozilla Firefox).
 
-Caso queira rodar o projeto localmente em sua máquina, você precisará do `Node.js` instalado e seguir os seguintes passos:
+Caso queira rodar o projeto localmente em sua máquina, você precisará do `Node.js >= 14.0.0` instalado e seguir os seguintes passos:
 
 * Clone o projeto (baixando o arquivo `.zip` disponibilizado pelo GitHub ou usando `git clone https://github.com/Gaizgrol/automatos-finitos-deterministicos`)
 
