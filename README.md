@@ -1,10 +1,10 @@
 # 🔄 Autômatos Finitos Determinísticos - *Playground*
 
-## Tecnologias utilizadas
+## 🧪 Tecnologias utilizadas
 
 ### Dependências
 <a href="https://nodejs.org">
-  <img src="https://img.shields.io/badge/Node.js-14-339933?style=flat&logo=nodedotjs" alt="Node.js 14">
+  <img src="https://img.shields.io/badge/Node.js-14-339933?style=flat&logo=nodedotjs" alt="Node.js 14.0">
 </a>
 
 <a href="https://www.typescriptlang.org/">
@@ -16,12 +16,12 @@
 </a>
 
 ### Navegadores testados
-<a href="#">
-  <img src="https://img.shields.io/badge/Mozilla%20Firefox-91-FF7139?style=flat&logo=Firefox-Browser" alt="Firefox 91">
+<a href="https://www.mozilla.org/pt-BR/firefox/new/">
+  <img src="https://img.shields.io/badge/Mozilla%20Firefox-91.0-FF7139?style=flat&logo=Firefox-Browser" alt="Firefox 91.0">
 </a>
 
-<a href="#">
-  <img src="https://img.shields.io/badge/Google%20Chrome-92-4285F4?style=flat&logo=Google-chrome" alt="Google Chrome 92">
+<a href="https://www.google.com/intl/pt-BR/chrome/">
+  <img src="https://img.shields.io/badge/Google%20Chrome-92.0-4285F4?style=flat&logo=Google-chrome" alt="Google Chrome 92.0">
 </a>
 
 
