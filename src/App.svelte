@@ -29,9 +29,13 @@
 		<hr>
 	</section>
 
-	<section>
-		<h2>📋 Instruções para usar o playground</h2>
+	<!--
+		Explicação de AFDs e sua utilidade aqui
+	-->
 
+	<section>
+		<h2>📋 Instruções para interagir com os exemplos</h2>
+		<hr>
 	</section>
 	
 	<section>
@@ -42,6 +46,11 @@
 	<section>
 		<h3>Validador de Email</h3>
 		<Automato nomeAfd="email" editavel={false}></Automato>
+	</section>
+
+	<section>
+		<h2>📋 Instruções para interagir com o <i>Playground</i></h2>
+		<hr>
 	</section>
 
 	<section>
