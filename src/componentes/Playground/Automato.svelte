@@ -222,7 +222,7 @@
         width: 100%;
         min-height: 720px;
 
-        background-image: url(/assets/imagens/grid.png);
+        background-image: url(../assets/imagens/grid.png);
         background-attachment: local;
         background-repeat: repeat;
     }
