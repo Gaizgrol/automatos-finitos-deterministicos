@@ -1,13 +1,38 @@
 export default class Estado
 {
-    // ID não deve ser alterado durante execução
-    private readonly id: string;
-    private mapa: Map<string, Estado>;
+    private readonly _id: string;
+    private readonly _mapa: Map<string, Estado>;
 
     constructor( id: string )
     {
-        this.id = id;
-        this.mapa = new Map();
+        this._id = id;
+        this._mapa = new Map();
+    }
+
+    /**
+     * ID não deve ser modificado
+     */
+    get id()
+    {
+        return this._id;
+    }
+
+    /**
+     * Devolve um array de símbolos de entrada que mapeiam para um estado diferente
+     */
+    get entradas(): string[]
+    {
+        return [...this._mapa.keys()]
+    }
+
+    /**
+     * Verifica se existe mapeamento para o símbolo
+     * 
+     * @param simbolo 
+     */
+    contem( simbolo: string ): boolean
+    {
+        return this._mapa.has( simbolo );
     }
 
     /**
@@ -22,13 +47,13 @@ export default class Estado
         const estado = this.estado( simboloAnterior );
 
         // Se existe um mapeamento anterior e não vamos sobrescrever nenhum outro mapeamento
-        if ( estado && !this.mapa.has( novoSimbolo ) )
+        if ( estado && !this._mapa.has( novoSimbolo ) )
         {
             // Remove mapeamento anterior
-            this.mapa.delete( simboloAnterior );
+            this._mapa.delete( simboloAnterior );
 
             // Adiciona novo mapeamento
-            this.mapa.set( novoSimbolo, estado )
+            this._mapa.set( novoSimbolo, estado )
 
             // Tudo certo
             return true;
@@ -46,7 +71,10 @@ export default class Estado
      */
     atualiza( simbolo: string, estado: Estado ): void
     {
-        this.mapa.set( simbolo, estado );
+        if ( estado !== this )
+            this._mapa.set( simbolo, estado );
+        else
+            this._mapa.delete( simbolo );
     }
 
     /**
@@ -57,9 +85,22 @@ export default class Estado
      */
     estado( simbolo: string ): Estado
     {
-        return this.mapa.get( simbolo ) ?? null;
+        return this._mapa.get( simbolo ) ?? null;
     }
 
+    removeEstado( estado: Estado )
+    {
+        for ( const entrada of this._mapa.keys() )
+            if ( this._mapa.get( entrada ) === estado )
+                this._mapa.delete( entrada );
+    }
+
+    remapeia( alfabeto: string[] )
+    {
+        for ( const entrada of this._mapa.keys() )
+            if ( !alfabeto.includes( entrada ) )
+                this._mapa.delete( entrada );
+    }
 
     /**
      * Parecido com o método `estado`, porém quando não há mapeamento retorna uma referência própria
