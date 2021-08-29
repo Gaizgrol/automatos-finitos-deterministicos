@@ -8,10 +8,13 @@
     <use xlink:href="assets/svg/{file}.svg#icon"/>
 </svg>
 
+
 <script lang="ts">
-    // Nome do arquivo SVG
+    
+    // Visíveis externamente
     export let file: string;
     export let w: number = 32;
     export let h: number = 32;
     export let style: string = '';
+
 </script>
