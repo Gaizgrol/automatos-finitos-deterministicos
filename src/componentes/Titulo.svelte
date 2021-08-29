@@ -39,6 +39,11 @@
 
 
 <style>
+    h1
+    {
+        font-size: 2.5rem;
+    }
+
     .suave
     {
         transition: color 0.5s;
