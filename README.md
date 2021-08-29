@@ -1,7 +1,7 @@
 # 🔄 Autômatos Finitos Determinísticos - *Playground*
 
-## 🔗 Link do projeto:
-### https://github.com/Gaizgrol/automatos-finitos-deterministicos/
+## 🔗 Link para **visualização** do projeto:
+### https://gaizgrol.github.io/automatos-finitos-deterministicos/
 
 ---
 
